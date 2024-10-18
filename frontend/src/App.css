@@ -4,7 +4,7 @@
 }
 
 body{
-  background-color: #fff;
+  background-color: #454547;
   background: none;
   font-family: Noto Sans KR, Arial, sans-serif;
   font-size: 16px;
@@ -53,7 +53,8 @@ header {
 }
 
 .nav-section{
-  background-color: #fff;
+  /*background-color: #fff;*/
+  background-color: #454547;
   border-bottom: 2px solid #f1f1f1;
   position: sticky;
   scroll-behavior: smooth;
@@ -73,7 +74,7 @@ header {
 }
 
 .container-class {
-  background-color: #fff;
+  background-color: #454547;
   border-radius: 10px;
   max-width: 100%;
   min-height: 100vh;
@@ -95,4 +96,63 @@ header {
   display: list item;
   text-align: -webkit-match-parent;
   unicode-bidi: isolate;
+}
+
+.text_dev_title:before {
+  font-size: 30px;
+  font-weight: 600;
+  content: "";
+  color: #0f0fc1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #454547;
+  animation: animate 4s steps(12) infinite;
+}
+
+@keyframes animate {
+  40%, 60%{
+    left: 100%;
+  }
+  100%{
+    left: 0%;
+  }
+}
+
+.container-dev-title {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.container-dev-title .text {
+  position: relative;
+  font-size: 30px;
+  font-weight: 600;
+}
+.container .text.first-text {
+  color: #fff; 
+}
+.text.sec-text {
+  color: #0f0fc1;
+}
+.text.sec-text:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #454547;
+  border-left: 2px solid #0f0fc1;
+  animation: animate 4s steps(12) infinite;
+}
+@keyframes animate {
+  40%, 60%{
+    left: 100%;
+  }
+  100%{
+    left: 0%;
+  }
 }

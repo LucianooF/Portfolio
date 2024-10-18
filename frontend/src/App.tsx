@@ -31,6 +31,14 @@ function App() {
         </div>
       </header>
       <main className='container-class'>
+        <div id='first_block'>
+          <div>Foto</div>
+          <div className='container-dev-title'>
+            <span className='text first-text'>Soy&nbsp; </span>
+            <span className='text sec-text'>Desarrollador Web</span>
+          </div>
+          <div>lorem</div>
+        </div>
         <div id='about_me'>about me</div>
         <div id='skills'>skills</div>
         <div id='projects'>projects</div>
