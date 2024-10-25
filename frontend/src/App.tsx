@@ -8,7 +8,7 @@ function App() {
         <div className='nav-section'>
           <div className='nav-content'>
             <div className='logo'>
-              Portfolio
+              Portfolio(work in progress)
             </div>
             <nav className='menu-list'>
               <ul>
