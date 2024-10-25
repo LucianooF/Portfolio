@@ -2,5 +2,6 @@
     "rewrites": [
     { "source": "/(.*)", "destination": "/" }
     ],
-    "installCommand": "pnpm install"
+    "installCommand": "pnpm install",
+    "buildCommand": "pnpm run build"
   }
