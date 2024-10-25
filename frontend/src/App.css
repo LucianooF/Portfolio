@@ -38,8 +38,8 @@ body{
 }
 
 header {
-  margin: 2px;
   background-color: #58C4DC;
+  display: unset;
 }
 
 .nav-section .nav-content .menu-list {
@@ -55,7 +55,6 @@ header {
 .nav-section{
   /*background-color: #fff;*/
   background-color: #454547;
-  border-bottom: 2px solid #f1f1f1;
   position: sticky;
   scroll-behavior: smooth;
   top: 0;
@@ -74,8 +73,8 @@ header {
 }
 
 .container-class {
-  background-color: #454547;
-  border-radius: 10px;
+  
+  background-color: #222227;
   max-width: 100%;
   min-height: 100vh;
   overflow: hidden;
@@ -98,17 +97,31 @@ header {
   unicode-bidi: isolate;
 }
 
-.text_dev_title:before {
-  font-size: 30px;
-  font-weight: 600;
-  content: "";
-  color: #0f0fc1;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #454547;
-  animation: animate 4s steps(12) infinite;
+.first_block {
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  margin: auto;
+  min-height: 30dvh; 
+  gap: 15px;
+  margin-bottom: 15px;
+}
+.about_me_block {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.avatar {
+  background-image: url(./assets/profile_photo.jpg);
+  background-position: bottom;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
 }
 
 @keyframes animate {
@@ -122,9 +135,12 @@ header {
 
 .container-dev-title {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   margin: 0;
   padding: 0;
+  gap: 15px;
 }
 .container-dev-title .text {
   position: relative;
@@ -144,7 +160,7 @@ header {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #454547;
+  background-color: #222227;
   border-left: 2px solid #0f0fc1;
   animation: animate 4s steps(12) infinite;
 }
@@ -156,3 +172,28 @@ header {
     left: 0%;
   }
 }
+
+
+.about-me-section {
+  font-family: ui-sans-serif;
+  font-weight: 500;
+  background-image: conic-gradient(from 90deg at -10% 100%, #2b303b 0deg, #2b303b 90deg, #16181d 1turn);
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.skill_section {
+  font-family: ui-sans-serif;
+  font-weight: 500;
+}
+
+.projects_section {
+  font-family: ui-sans-serif;
+  font-weight: 500;
+  background-image: conic-gradient(from 90deg at -10% 100%, #2b303b 0deg, #2b303b 90deg, #16181d 1turn);
+
+}
+
+
