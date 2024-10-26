@@ -58,7 +58,11 @@ function App() {
         <div id='about_me'></div>
         <div className='about-me-section'>
           <h2 className='title_content'>Sobre mi</h2>
-          <div className='about-me-content'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sollicitudin ultricies metus at pulvinar. In laoreet justo enim, at congue nibh ultricies et. Duis rhoncus interdum ipsum, et rhoncus nulla efficitur et. Maecenas erat enim, auctor et pharetra non, fermentum et est. Quisque semper lobortis lectus, ac dapibus tortor. Nullam nec aliquet orci. Nullam dapibus finibus sollicitudin. Curabitur sagittis eros eu pharetra congue. Nulla elementum ullamcorper augue quis dignissim.</div>
+          <div className='about-me-content'>
+            <p>Hola, soy Luciano Farias, tengo 25 años, soy de Argentina, estudie durante 3 años Licenciatura Gestion de Tecnologias de la Informacion</p>
+            <p>Tengo experiencia desarrollando en Front y Back, y junto al conocimiento que adquiri en mi paso por la Universidad, soy capaz de desenvolverme como Fullstack</p>
+            <p>Busco un equipo donde pueda aportar mi granito de arena y demostrar mi conocimiento y Soft Skills</p>
+            </div>
         </div>
         <div id='skills'></div>
         <div className='skills_section'>
