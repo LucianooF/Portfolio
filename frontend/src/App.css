@@ -154,6 +154,24 @@ a + a {
   
   
 }
+.tech_content {
+  display: flex;
+  column-count: 5;
+  gap: 5px;
+}
+
+.icon_container img{
+  width: 50px;
+  height: 50px;
+}
+
+
+.icon_container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  color: #3e3eea;
+}
 
 .avatar {
   background-image: url(./assets/profile_photo.jpg);
@@ -191,7 +209,8 @@ a + a {
   color: #fff; 
 }
 .text.sec-text {
-  color: #0f0fc1;
+  /*color: #0f0fc1;*/
+  color: #3e3eea;
 }
 .text.sec-text:before {
   content: "";
@@ -201,7 +220,7 @@ a + a {
   height: 100%;
   width: 100%;
   background-color: #222227;
-  border-left: 2px solid #0f0fc1;
+  border-left: 2px solid #3e3eea;
   animation: animate 4s steps(12) infinite;
 }
 @keyframes animate {
@@ -224,10 +243,21 @@ a + a {
   flex-direction: column;
 }
 
-.skill_section {
+.skills_section {
   font-family: ui-sans-serif;
   font-weight: 500;
 }
+
+.title_content {
+  display: flex;
+  justify-content: center;
+}
+
+.skills_content {
+  justify-content: center;
+  display: grid;
+}
+
 
 .projects_section {
   font-family: ui-sans-serif;

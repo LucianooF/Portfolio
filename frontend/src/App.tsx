@@ -61,7 +61,8 @@ function App() {
           <div className='about-me-content'>
             <p>Hola, soy Luciano Farias, tengo 25 años, soy de Argentina, estudie durante 3 años Licenciatura Gestion de Tecnologias de la Informacion</p>
             <p>Tengo experiencia desarrollando en Front y Back, y junto al conocimiento que adquiri en mi paso por la Universidad, soy capaz de desenvolverme como Fullstack</p>
-            <p>Busco un equipo donde pueda aportar mi granito de arena y demostrar mi conocimiento y Soft Skills</p>
+            <p> </p>
+            <p>Busco un equipo donde pueda aportar mi granito de arena y seguir mejorando mi nivel como Desarrollador</p>
             </div>
         </div>
         <div id='skills'></div>
@@ -71,12 +72,83 @@ function App() {
             <h4>Frontend</h4>
             <div className='tech_content'>
               <div className='icon_container'>
-                
+                <img src='/technologies/html5.svg'/>
+                HTML5
+              </div>
+              <div className='icon_container'>
+                <img src='/technologies/css3.svg'/>
+                CSS3
+              </div>
+              <div className='icon_container'>
+                <img src='/technologies/javascript.svg'/>
+                JavaScript
+              </div>
+              <div className='icon_container'>
+                <img src='/technologies/react.svg'/>
+                React
+              </div>
+              <div className='icon_container'>
+                <img src='/technologies/typescript.svg'/>
+                TypeScript
+              </div>
+              <div className='icon_container'>
+                <img src='/technologies/bootstrap.svg'/>
+                BootStrap
               </div>
             </div>
             <h4>Backend</h4>
             <div className='tech_content'>
-              <div className='icon_container'></div>
+              <div className='icon_container'>
+                <img src='/technologies/node.svg'/>
+                Node
+              </div>
+              <div className='icon_container'>
+                <img src='/technologies/java.svg'/>
+                Java
+              </div>
+              <div className='icon_container'>
+                <img src='/technologies/python.svg'/>
+                Python
+              </div>
+            </div>
+            <h4>Base de Datos</h4>
+            <div className='tech_content'>
+              <div className='icon_container'>
+                <img src='/technologies/postgresql.svg'/>
+                PostgreSQL
+              </div>
+              <div className='icon_container'>
+                <img src='/technologies/mysql.svg' />
+                MySQL
+              </div>
+
+            </div>
+            <h4>Otras Herramientas</h4>
+            <div className='tech_content'>
+              <div className='icon_container'>
+                <img src='/technologies/vitest.svg'/>
+                Vitest
+              </div>
+              <div className='icon_container'>
+                <img src='/technologies/git.svg'/>
+                Git
+              </div>
+              <div className='icon_container'>
+                <img src='/technologies/github.svg' style={{backgroundColor:'#fff'}} />
+                GitHub
+              </div>
+              <div className='icon_container'>
+                <img src='/technologies/figma.svg'/>
+                Figma
+              </div>
+              <div className='icon_container'>
+                <img src='/technologies/enterprise.jpg'/>
+                EnterPrise Arquitect
+              </div>
+              <div className='icon_container'>
+                <img src='/technologies/postman.svg'/>
+                Postman
+              </div>
             </div>
           </div>
         </div>
