@@ -13,16 +13,16 @@ function App() {
             <nav className='menu-list'>
               <ul>
                 <li>
-                  <a aria-label='seccion sobre mi'>¿Quién soy?</a>
+                  <a href='#about_me' className='smoothscroll' aria-label='seccion sobre mi'>¿Quién soy?</a>
                 </li>
                 <li>
-                  <a aria-label='seccion de habilidades'>Habilidades</a>
+                  <a href='#skills' aria-label='seccion de habilidades'>Habilidades</a>
                 </li>
                 <li>
-                  <a aria-label='seccion de proyectos'>Proyectos</a>
+                  <a href='#projects' aria-label='seccion de proyectos'>Proyectos</a>
                 </li>
                 <li>
-                  <a aria-label='seccion de contacto'>Contacto</a>
+                  <a href='#contact' aria-label='seccion de contacto'>Contacto</a>
                 </li>
                 <li>Flag</li>
               </ul>
@@ -39,6 +39,18 @@ function App() {
               <span className='text sec-text'>Desarrollador Web</span>
             </div>
             <div>Soy Luciano Farias, programador con un nivel de ingles C1 ,me dedico al desarrollo web enfocado en las buenas prácticas y metodologías ágiles para brindar resultados de calidad.</div>
+            <div className='link_buttons'>
+              <a href=''></a>
+              <a href=''></a>
+              <a href=''></a>
+            </div>
+            <div>
+              <a href='/assets/CV_Luciano_Farias.pdf' download='CV Luciano Farias.pdf'>
+              
+              CV
+              
+              </a>
+            </div>
           </div>
         </div>
         

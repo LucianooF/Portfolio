@@ -96,6 +96,18 @@ header {
   text-align: -webkit-match-parent;
   unicode-bidi: isolate;
 }
+a{
+  text-decoration: none;
+}
+
+a:hover, a:visited, a:link, a:active {
+  color: inherit;
+  text-decoration: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: none;
+}
+
 
 .first_block {
   align-items: center;
