@@ -38,17 +38,18 @@ function App() {
               <span className='text first-text'>Luciano Farias&nbsp; </span>
               <span className='text sec-text'>Desarrollador Web</span>
             </div>
-            <div>Soy Luciano Farias, programador con un nivel de ingles C1 ,me dedico al desarrollo web enfocado en las buenas prácticas y metodologías ágiles para brindar resultados de calidad.</div>
+            <div className='about_me_text'>Soy Luciano Farias, programador con un nivel de ingles C1 ,me dedico al desarrollo web enfocado en las buenas prácticas y metodologías ágiles para brindar resultados de calidad.</div>
             <div className='link_buttons'>
-              <a href=''></a>
-              <a href=''></a>
-              <a href=''></a>
+              <a href='https://www.linkedin.com/in/luciano-farias/' target='_blank'><i className="bi bi-linkedin"></i></a>
+              <a href='https://github.com/LucianooF' target='_blank'><i className="bi bi-github"></i></a>
+              <a href='mailto:lucianofarias544@gmail.com'>
+              <i className="bi bi-envelope"></i>
+              </a>
             </div>
             <div>
-              <a href='/CV_Luciano_Farias.pdf' download='CV Luciano Farias.pdf'>
-              
-              CV
-              
+              <a className='btn btn_blue' href='/CV_Luciano_Farias.pdf' download='CV Luciano Farias.pdf'>
+              Descargar CV
+              <i className="bi bi-file-earmark-arrow-down-fill" style={{fontSize:'20px', marginLeft:'5px'}} ></i>
               </a>
             </div>
           </div>
