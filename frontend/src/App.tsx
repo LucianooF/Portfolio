@@ -45,7 +45,7 @@ function App() {
               <a href=''></a>
             </div>
             <div>
-              <a href='/assets/CV_Luciano_Farias.pdf' download='CV Luciano Farias.pdf'>
+              <a href='/CV_Luciano_Farias.pdf' download='CV Luciano Farias.pdf'>
               
               CV
               
