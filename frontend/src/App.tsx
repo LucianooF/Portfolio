@@ -1,5 +1,5 @@
 import './App.css'
-import { ContactUs } from './assets/components/MailForm.jsx'
+import { ContactUs } from './assets/components/MailForm'
 
 function App() {
   
