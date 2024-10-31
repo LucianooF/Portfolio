@@ -1,13 +1,13 @@
 import React, { useRef } from 'react';
 
 export const ContactUs = () => {
-  const form = useRef();
+  const form = useRef<HTMLFormElement>(null);
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     emailjs
-      .sendForm('contact_service', 'contact_form', form.current, {
+      .sendForm('contact_service', 'contact_form', form.current as HTMLFormElement, {
         publicKey: 'qtriiT2_yQ4XZ50-L',
       })
       .then(
