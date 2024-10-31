@@ -267,3 +267,20 @@ a + a {
 }
 
 
+.contact_section {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.form_container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.form_contact {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+

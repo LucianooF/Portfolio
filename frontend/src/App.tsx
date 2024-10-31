@@ -1,4 +1,5 @@
 import './App.css'
+import { ContactUs } from './assets/components/MailForm.jsx'
 
 function App() {
   
@@ -125,6 +126,10 @@ function App() {
             </div>
             <h4>Otras Herramientas</h4>
             <div className='tech_content'>
+            <div className='icon_container'>
+                <img src='/technologies/wordpress.svg'/>
+                Wordpress
+              </div>
               <div className='icon_container'>
                 <img src='/technologies/vitest.svg'/>
                 Vitest
@@ -162,7 +167,24 @@ function App() {
         </div>
         <div id='contact'></div>
         <div className='contact_section'>
-          <h2>Contacto</h2>
+          <h2 className='title_content'>Contacto</h2>
+          <div className='contact_content'>
+            <div className='form_container'>
+               {/* <form className='form_contact'>
+                <input type='text' placeholder='Nombre'></input>
+                <input type='email' placeholder='correo@mail.com'></input>
+                <textarea name='message' placeholder='Quiero contactarte'></textarea>
+               <button >
+                <i className="bi bi-send"></i>
+                Enviar
+                </button>
+              </form> */}
+              <ContactUs></ContactUs>
+
+            </div>
+            
+          </div>
+
         </div>
         <div></div>
         <div></div>
