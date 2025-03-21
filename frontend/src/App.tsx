@@ -1,7 +1,12 @@
+import { lazy, Suspense } from 'react'
 import './App.css'
-import { ContactUs } from './assets/components/MailForm'
+import { LanguageProvider, useLanguage } from './context/LanguageContext'
 
-function App() {
+// Lazy loading components
+const ContactUs = lazy(() => import('./assets/components/MailForm').then(module => ({ default: module.ContactUs })))
+
+function AppContent() {
+  const { translations, language, toggleLanguage } = useLanguage()
   
   return (
     <>
@@ -9,23 +14,31 @@ function App() {
         <div className='nav-section'>
           <div className='nav-content'>
             <div className='logo'>
-              Portfolio(work in progress)
+              Portfolio
             </div>
             <nav className='menu-list'>
               <ul>
                 <li>
-                  <a href='#about_me' className='smoothscroll' aria-label='seccion sobre mi'>¿Quién soy?</a>
+                  <a href='#about_me' className='smoothscroll' aria-label='seccion sobre mi'>{translations.nav.whoAmI}</a>
                 </li>
                 <li>
-                  <a href='#skills' aria-label='seccion de habilidades'>Habilidades</a>
+                  <a href='#skills' aria-label='seccion de habilidades'>{translations.nav.skills}</a>
                 </li>
                 <li>
-                  <a href='#projects' aria-label='seccion de proyectos'>Proyectos</a>
+                  <a href='#projects' aria-label='seccion de proyectos'>{translations.nav.projects}</a>
                 </li>
                 <li>
-                  <a href='#contact' aria-label='seccion de contacto'>Contacto</a>
+                  <a href='#contact' aria-label='seccion de contacto'>{translations.nav.contact}</a>
                 </li>
-                <li>Flag</li>
+                <li>
+                  <button 
+                    onClick={toggleLanguage} 
+                    className='language-btn'
+                    aria-label='cambiar idioma'
+                  >
+                    {language === 'es' ? 'EN' : 'ES'}
+                  </button>
+                </li>
               </ul>
             </nav>
           </div>
@@ -36,41 +49,44 @@ function App() {
           <div className='avatar'></div>
           <div className='about_me_block'>
             <div className='container-dev-title'>
-              <span className='text first-text'>Luciano Farias&nbsp; </span>
-              <span className='text sec-text'>Desarrollador Web</span>
+              <span className='text first-text'>Luciano Farias&nbsp;</span>
+              <span className='text sec-text'>{translations.hero.role}</span>
             </div>
-            <div className='about_me_text'>Soy Luciano Farias, programador con un nivel de ingles C1 ,me dedico al desarrollo web enfocado en las buenas prácticas y metodologías ágiles para brindar resultados de calidad.</div>
+            <div className='about_me_text'>{translations.hero.description}</div>
             <div className='link_buttons'>
-              <a href='https://www.linkedin.com/in/luciano-farias/' target='_blank'><i className="bi bi-linkedin"></i></a>
-              <a href='https://github.com/LucianooF' target='_blank'><i className="bi bi-github"></i></a>
+              <a href='https://www.linkedin.com/in/luciano-farias/' target='_blank' rel="noopener noreferrer">
+                <i className="bi bi-linkedin"></i>
+              </a>
+              <a href='https://github.com/LucianooF' target='_blank' rel="noopener noreferrer">
+                <i className="bi bi-github"></i>
+              </a>
               <a href='mailto:lucianofarias544@gmail.com'>
-              <i className="bi bi-envelope"></i>
+                <i className="bi bi-envelope"></i>
               </a>
             </div>
             <div>
               <a className='btn btn_blue' href='/CV_Luciano_Farias.pdf' download='CV Luciano Farias.pdf'>
-              Descargar CV
-              <i className="bi bi-file-earmark-arrow-down-fill" style={{fontSize:'20px', marginLeft:'5px'}} ></i>
+                <i className="bi bi-download"></i>
+                {translations.buttons.downloadCV}
               </a>
             </div>
           </div>
         </div>
-        
         <div id='about_me'></div>
         <div className='about-me-section'>
-          <h2 className='title_content'>Sobre mi</h2>
+          <h2 className='title_content'>{translations.sections.aboutMe}</h2>
           <div className='about-me-content'>
-            <p>Hola, soy Luciano Farias, tengo 25 años, soy de Argentina, estudie durante 3 años Licenciatura Gestion de Tecnologias de la Informacion</p>
-            <p>Tengo experiencia desarrollando en Front y Back, y junto al conocimiento que adquiri en mi paso por la Universidad, soy capaz de desenvolverme como Fullstack</p>
-            <p> </p>
-            <p>Busco un equipo donde pueda aportar mi granito de arena y seguir mejorando mi nivel como Desarrollador</p>
-            </div>
+            <p>{translations.aboutMe.text1}</p>
+            <p>{translations.aboutMe.text2}</p>
+            <p>{translations.aboutMe.text3}</p>
+            <p>{translations.aboutMe.text4}</p>
+          </div>
         </div>
         <div id='skills'></div>
         <div className='skills_section'>
-          <h2 className='title_content'>Habilidades</h2>
+          <h2 className='title_content'>{translations.sections.skills}</h2>
           <div className='skills_content'>
-            <h4>Frontend</h4>
+            <h4>{translations.skills.frontend}</h4>
             <div className='tech_content'>
               <div className='icon_container'>
                 <img src='/technologies/html5.svg'/>
@@ -97,7 +113,7 @@ function App() {
                 BootStrap
               </div>
             </div>
-            <h4>Backend</h4>
+            <h4>{translations.skills.backend}</h4>
             <div className='tech_content'>
               <div className='icon_container'>
                 <img src='/technologies/node.svg'/>
@@ -112,7 +128,7 @@ function App() {
                 Python
               </div>
             </div>
-            <h4>Base de Datos</h4>
+            <h4>{translations.skills.databases}</h4>
             <div className='tech_content'>
               <div className='icon_container'>
                 <img src='/technologies/postgresql.svg'/>
@@ -122,11 +138,10 @@ function App() {
                 <img src='/technologies/mysql.svg' />
                 MySQL
               </div>
-
             </div>
-            <h4>Otras Herramientas</h4>
+            <h4>{translations.skills.otherTools}</h4>
             <div className='tech_content'>
-            <div className='icon_container'>
+              <div className='icon_container'>
                 <img src='/technologies/wordpress.svg'/>
                 Wordpress
               </div>
@@ -159,42 +174,31 @@ function App() {
         </div>
         <div id='projects'></div>
         <div className='projects_section'>
-          <h2 className='title_content'>Proyectos</h2>
+          <h2 className='title_content'>{translations.sections.projects}</h2>
           <div className='projects_container'>
             <div className='item_card'></div>
           </div>
-
         </div>
-        <div id='contact'></div>
-        <div className='contact_section'>
-          <h2 className='title_content'>Contacto</h2>
-          <div className='contact_content'>
-            <div className='form_container'>
-               {/* <form className='form_contact'>
-                <input type='text' placeholder='Nombre'></input>
-                <input type='email' placeholder='correo@mail.com'></input>
-                <textarea name='message' placeholder='Quiero contactarte'></textarea>
-               <button >
-                <i className="bi bi-send"></i>
-                Enviar
-                </button>
-              </form> */}
-              <ContactUs></ContactUs>
-
-            </div>
-            
-          </div>
-
-        </div>
-        <div></div>
-        <div></div>
+        <section id='contact'>
+          <Suspense fallback={<div className="loading">Loading...</div>}>
+            <ContactUs translations={translations.contact} />
+          </Suspense>
+        </section>
       </main>
       <footer>
         <div className='footer-section'>
-          <p>© Luciano Farias | Fullstack Developer</p>
+          <p>{translations.footer}</p>
         </div>
       </footer>
     </>
+  )
+}
+
+function App() {
+  return (
+    <LanguageProvider>
+      <AppContent />
+    </LanguageProvider>
   )
 }
 
